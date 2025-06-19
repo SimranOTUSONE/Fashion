@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./NewArrivals.css";
 
 const products = [
@@ -38,6 +39,12 @@ const products = [
 ];
 
 const NewArrivals = () => {
+  const navigate = useNavigate();
+
+  const handleImageClick = (product) => {
+    navigate(`/product/${product.name}`, { state: product });
+  };
+
   return (
     <section className="new-arrivals">
       <div className="head">
@@ -51,7 +58,11 @@ const NewArrivals = () => {
       <div className="product-row">
         {products.map((p, idx) => (
           <div className="product" key={idx}>
-            <div className="image-container">
+            <div
+              className="image-container"
+              onClick={() => handleImageClick(p)}
+              style={{ cursor: "pointer" }}
+            >
               <img src={p.image} alt={p.name} />
               {p.showButton && <button className="view-button">View Details</button>}
             </div>

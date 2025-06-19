@@ -1,3 +1,21 @@
+:root {
+  --primary-color: #333;  /* fallback dark gray */
+  --secondary-color: #ff4081; /* example pink accent */
+  --gray-color: #777;
+}
+.logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-list li a,
+.nav-list li span,
+.account-link,
+.wishlist-link,
+.cart-link {
+  color: var(--primary-color);
+}
+
 .header {
   position: fixed;
   top: 0;

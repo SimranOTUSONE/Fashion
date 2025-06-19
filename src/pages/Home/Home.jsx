@@ -2,7 +2,7 @@ import React from 'react';
 import HeroBanner from '../../components/HeroBanner/HeroBanner';
 // import CategorySection from '../../components/CategorySection/CategorySection';
 import ProductCard from '../../components/ProductCard/ProductCard';
-// import Newsletter from '../../components/Newsletter/Newsletter';
+import Newsletter from '../../components/Newsletter/Newsletter';
 import { featuredProducts } from '../../assets/data/products';
 import './Home.css';
 

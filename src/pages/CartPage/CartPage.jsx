@@ -1,8 +1,17 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import { CartContext } from '../../context/CartContext';
 import './CartPage.css';
 
+const Cart = () => {
+  const navigate = useNavigate();
+}
+const handleClearAndRedirect = () => {
+    clearCart();
+    navigate('/shop');
+  };
 const CartPage = () => {
   const { 
     cartItems, 
@@ -85,7 +94,7 @@ const CartPage = () => {
             <h2>Your cart is empty</h2>
             <p>Looks like you hav
                 en't added anything to your cart yet</p>
-            <Link to="/shop" className="shop-now-btn">Shop Now</Link>
+            <Link to="/shop" target="_blank" rel="noopener noreferrer"  className="shop-now-btn"  >Shop Now</Link>
           </div>
         )}
       </div>
