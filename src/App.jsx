@@ -31,7 +31,7 @@ function App() {
 
           {/* CART PAGE: Full layout with HeroBanner, NewArrivals, etc. */}
           <Route
-            path="/cart"
+            path="/"
             element={
               <MainLayout>
                 <CartPage />
