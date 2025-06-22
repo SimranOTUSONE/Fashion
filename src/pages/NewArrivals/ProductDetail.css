@@ -142,7 +142,7 @@
   box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .product-detail {
     flex-direction: column;

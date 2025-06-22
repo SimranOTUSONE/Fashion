@@ -1,62 +1,118 @@
-.hero-banner {
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    min-height: 600px; /* Minimum height */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/* HeroBanner.css */
+/* Adjust the slide container's padding-bottom to control height */
+.hero-banner-slide {
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%; /* Increased from 33.33% to make taller */
+  position: relative;
 }
 
-.hero-content {
-    text-align: center;
+/* Ensure images fill the container */
+.hero-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures images cover the area without distortion */
+}
+.hero-banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* .hero-banner-slide {
+  width: 100%;
+  height: 0;
+  padding-bottom: 33.33%; 
+  position: relative;
+}
+
+.hero-banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+} */
+
+.hero-banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+.hero-banner-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.hero-banner-dot {
+  cursor: pointer;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-banner-dot.active {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-banner-slide {
+    padding-bottom: 50%; /* Adjust aspect ratio for tablets */
+  }
   
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 2;
+  .hero-banner-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
 
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #007bff; /* Example button color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    margin-top: 20px;
-}
-
-.hero-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-/* Optional overlay if you want to darken the background slightly */
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-    z-index: 1;
+@media (max-width: 480px) {
+  .hero-banner-slide {
+    padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+  }
+  
+  .hero-banner-dots {
+    bottom: 10px;
+  }
+  
+  .hero-banner-dot {
+    font-size: 18px;
+  }
 }
