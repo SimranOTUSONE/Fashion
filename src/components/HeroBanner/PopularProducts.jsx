@@ -1,7 +1,6 @@
 import React from 'react';
 import './PopularProducts.css';
 
-// Import your images (adjust paths as needed)
 import Product1 from '/images/ex1.jpg';
 import Product2 from '/images/ex2.jpg';
 import Product3 from '/images/ex3.jpg';

@@ -1,70 +1,119 @@
 * {
-  background: white;
-  color: black;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.product-detail-container {
+  padding: 40px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #999;
+  padding: 100px 20px;
 }
 
 .product-detail {
   display: flex;
   flex-wrap: wrap;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   gap: 40px;
   padding: 40px;
-  max-width: 1200px;
-  margin: auto;
+}
+
+.detail-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .detail-image img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: transform 0.3s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .detail-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .detail-info {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.detail-info h1 {
+.brand {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.name {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #222;
 }
 
 .price {
-  font-size: 1.5rem;
-  margin: 15px 0;
-  color: #333;
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .original-price {
   text-decoration: line-through;
-  color: gray;
+  color: #999;
   margin-left: 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
 }
 
 .color-options {
-  margin: 15px 0;
+  margin-bottom: 20px;
+}
+
+.color-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .color-dot {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  margin-right: 8px;
-  border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 0.2s, border 0.3s;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border 0.3s;
 }
 
 .color-dot:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .color-dot.active {
@@ -72,52 +121,55 @@
 }
 
 .quantity-selector {
-  margin: 15px 0;
+  margin-bottom: 20px;
 }
 
 .quantity-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 5px;
 }
 
 .quantity-controls button {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   font-size: 1.2rem;
-  background-color: #eee;
+  background-color: #e9ecef;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 
 .quantity-controls button:hover {
-  background-color: #ccc;
+  background-color: #ced4da;
 }
 
 .description {
-  margin: 20px 0;
   font-size: 1rem;
   color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .actions {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .buy-now,
 .add-to-cart {
-  padding: 12px 25px;
+  padding: 14px 30px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
   border-radius: 8px;
   transition: all 0.3s ease;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .buy-now {
@@ -133,23 +185,27 @@
 .buy-now:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
 .add-to-cart:hover {
   background-color: #1e7e34;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
 }
-
 
 @media (max-width: 768px) {
   .product-detail {
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
   }
 
-  .detail-image img {
-    max-width: 100%;
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buy-now,
+  .add-to-cart {
+    width: 100%;
+    text-align: center;
   }
 }

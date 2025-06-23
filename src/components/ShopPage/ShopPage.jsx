@@ -18,6 +18,19 @@ const categories = [
         price: 18.99,
         image: '/images/sweater.png',
       },
+       {
+        id: 2,
+        name: 'Black Graphic Tee',
+        price: 18.99,
+        image: '/images/sweater.png',
+      },
+       {
+        id: 2,
+        name: 'Black Graphic Tee',
+        price: 18.99,
+        image: '/images/sweater.png',
+      },
+      
     ],
   },
   {
@@ -27,7 +40,19 @@ const categories = [
         id: 3,
         name: 'Slim Fit Jeans',
         price: 39.99,
-        image: 'images/sweater.png',
+        image: '/images/sweater.png',
+      },
+      {
+        id: 4,
+        name: 'Relaxed Fit Jeans',
+        price: 42.50,
+        image: '/images/sweater.png',
+      },
+      {
+        id: 3,
+        name: 'Slim Fit Jeans',
+        price: 39.99,
+        image: '/images/sweater.png',
       },
       {
         id: 4,
@@ -52,6 +77,19 @@ const categories = [
         price: 99.99,
         image: '/images/sweater.png',
       },
+      {
+        id: 5,
+        name: 'Denim Jacket',
+        price: 55.00,
+        image: '/images/sweater.png',
+      },
+      {
+        id: 6,
+        name: 'Leather Jacket',
+        price: 99.99,
+        image: '/images/sweater.png',
+      },
+
     ],
   },
   {
@@ -69,6 +107,13 @@ const categories = [
         price: 85.50,
         image: '/images/sweater.png',
       },
+      {
+        id: 9,
+        name: 'Leather Boots',
+        price: 85.50,
+        image: '/images/sweater.png',
+      },
+      
     ],
   },
 ];
@@ -82,22 +127,26 @@ const ShopPage = () => {
 
   return (
     <div className="shop-page">
-      <h1>Clothing Shop</h1>
+      <h1>Shop the Latest Styles</h1>
 
       {categories.map((category) => (
-        <div key={category.name} className="category-section">
+        <section key={category.name} className="category-section">
           <h2>{category.name}</h2>
-          <div className="product-list">
+          <div className="product-grid">
             {category.items.map((item) => (
               <div className="product-card" key={item.id}>
-                <img src={item.image} alt={item.name} />
-                <h3>{item.name}</h3>
-                <p>${item.price.toFixed(2)}</p>
-                <button onClick={() => handleBuy(item)}>Buy</button>
+                <div className="image-container">
+                  <img src={item.image} alt={item.name} />
+                </div>
+                <div className="product-details">
+                  <h3>{item.name}</h3>
+                  <p className="price">${item.price.toFixed(2)}</p>
+                  <button onClick={() => handleBuy(item)}>Add to Cart</button>
+                </div>
               </div>
             ))}
           </div>
-        </div>
+        </section>
       ))}
     </div>
   );

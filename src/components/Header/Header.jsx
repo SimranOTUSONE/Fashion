@@ -90,47 +90,10 @@ const Header = () => {
       <nav className={`main-nav ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="container">
           <ul className="nav-list">
-            <li><Link to="/cart" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
             <li><Link to="/shop" onClick={() => setMobileMenuOpen(false)}>Shop</Link></li>
-            <li className="has-mega-menu">
-              <span>Categories <i className="fas fa-chevron-down"></i></span>
-              <div className="mega-menu" style={{background:"white"}}>
-                <div className="mega-menu-column">
-                  <h4>Women</h4>
-                  <ul>
-                    <li><Link to="/shop?category=women">All Women</Link></li>
-                    <li><Link to="/shop?category=women&type=dresses">Dresses</Link></li>
-                    <li><Link to="/shop?category=women&type=tops">Tops</Link></li>
-                    <li><Link to="/shop?category=women&type=jeans">Jeans</Link></li>
-                  </ul>
-                </div>
-                <div className="mega-menu-column" style={{background:"white"}}>
-                  <h4>Men</h4>
-                  <ul>
-                    <li><Link to="/shop?category=men">All Men</Link></li>
-                    <li><Link to="/shop?category=men&type=shirts">Shirts</Link></li>
-                    <li><Link to="/shop?category=men&type=pants">Pants</Link></li>
-                    <li><Link to="/shop?category=men&type=jackets">Jackets</Link></li>
-                  </ul>
-                </div>
-                <div className="mega-menu-column" style={{background:"white"}}>
-                  <h4>Accessories</h4>
-                  <ul>
-                    <li><Link to="/shop?category=accessories">All Accessories</Link></li>
-                    <li><Link to="/shop?category=accessories&type=bags">Bags</Link></li>
-                    <li><Link to="/shop?category=accessories&type=watches">Watches</Link></li>
-                    <li><Link to="/shop?category=accessories&type=jewelry">Jewelry</Link></li>
-                  </ul>
-                </div>
-                <div className="mega-menu-banner">
-                  <img src="/assets/images/mega-menu-banner.jpg" alt="Summer Sale" />
-                  <div className="banner-content">
-                    <h3>Summer Sale</h3>
-                    <p>Up to 50% off</p>
-                    <Link to="/shop" className="shop-now-btn">Shop Now</Link>
-                  </div>
-                </div>
-              </div>
+            <li>
+              <Link to="/categories" onClick={() => setMobileMenuOpen(false)}>Categories</Link>
             </li>
             <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
             <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>

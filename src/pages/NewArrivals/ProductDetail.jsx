@@ -9,7 +9,7 @@ const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState(product?.colors?.[0] || "");
   const [quantity, setQuantity] = useState(1);
 
-  if (!product) return <p>Product not found.</p>;
+  if (!product) return <p className="not-found">Product not found.</p>;
 
   const handleQuantityChange = (type) => {
     setQuantity(prev =>
@@ -18,51 +18,55 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="product-detail">
-      <div className="detail-image">
-        <img src={product.image} alt={product.name} />
-      </div>
-      <div className="detail-info">
-        <h2>{product.brand}</h2>
-        <h1>{product.name}</h1>
-        <p className="price">
-          ${product.price.toFixed(2)}
-          {product.originalPrice && (
-            <span className="original-price">
-              ${product.originalPrice.toFixed(2)}
-            </span>
-          )}
-        </p>
-
-        <div className="color-options">
-          <p>Available Colors:</p>
-          {product.colors.map((c, i) => (
-            <span
-              key={i}
-              className={`color-dot ${selectedColor === c ? "active" : ""}`}
-              style={{ backgroundColor: c }}
-              onClick={() => setSelectedColor(c)}
-              title={c}
-            ></span>
-          ))}
+    <div className="product-detail-container">
+      <div className="product-detail">
+        <div className="detail-image">
+          <img src={product.image} alt={product.name} />
         </div>
 
-        <div className="quantity-selector">
-          <p>Quantity:</p>
-          <div className="quantity-controls">
-            <button onClick={() => handleQuantityChange("dec")}>−</button>
-            <span>{quantity}</span>
-            <button onClick={() => handleQuantityChange("inc")}>+</button>
+        <div className="detail-info">
+          <h2 className="brand">{product.brand}</h2>
+          <h1 className="name">{product.name}</h1>
+
+          <p className="price">
+            ${product.price.toFixed(2)}
+            {product.originalPrice && (
+              <span className="original-price">${product.originalPrice.toFixed(2)}</span>
+            )}
+          </p>
+
+          <div className="color-options">
+            <p className="label">Available Colors:</p>
+            <div className="color-list">
+              {product.colors.map((c, i) => (
+                <span
+                  key={i}
+                  className={`color-dot ${selectedColor === c ? "active" : ""}`}
+                  style={{ backgroundColor: c }}
+                  onClick={() => setSelectedColor(c)}
+                  title={c}
+                ></span>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <p className="description">
-          This is a premium quality shoe from {product.brand}. Built for comfort and style.
-        </p>
+          <div className="quantity-selector">
+            <p className="label">Quantity:</p>
+            <div className="quantity-controls">
+              <button onClick={() => handleQuantityChange("dec")}>−</button>
+              <span>{quantity}</span>
+              <button onClick={() => handleQuantityChange("inc")}>+</button>
+            </div>
+          </div>
 
-        <div className="actions">
-          <button className="buy-now">Buy Now</button>
-          <button className="add-to-cart">Add to Cart</button>
+          <p className="description">
+            This premium quality shoe from <strong>{product.brand}</strong> is built for comfort, style, and performance.
+          </p>
+
+          <div className="actions">
+            <button className="buy-now">Buy Now</button>
+            <button className="add-to-cart">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
