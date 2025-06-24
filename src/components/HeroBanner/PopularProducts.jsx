@@ -28,7 +28,6 @@ const PopularProducts = () => {
       date: "ON JUNE 15, 2024",
       image: Product3
     },
-    
   ];
 
   return (
@@ -37,13 +36,15 @@ const PopularProducts = () => {
         <h1 className="section-title">Popular Products</h1>
         <div className="products-grid">
           {products.map((product, index) => (
-            <article key={index} className="product-card">
+            <article key={`product-${index}`} className="product-card">
               <div className="product-image-container">
                 <img 
                   src={product.image} 
                   alt={product.title} 
                   className="product-image"
-                  loading="lazy"  // Added for performance
+                  loading="lazy"
+                  width={400}
+                  height={300}
                 />
               </div>
               <div className="product-content">
