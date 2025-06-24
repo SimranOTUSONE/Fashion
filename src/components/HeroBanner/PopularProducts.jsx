@@ -28,13 +28,7 @@ const PopularProducts = () => {
       date: "ON JUNE 15, 2024",
       image: Product3
     },
-    {
-      title: "Accumsan Tortor Posuere Acut Consequat",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
-      category: "LIFESTYLE",
-      date: "ON JUNE 15, 2024",
-      image: Product3
-    }
+    
   ];
 
   return (
@@ -49,6 +43,7 @@ const PopularProducts = () => {
                   src={product.image} 
                   alt={product.title} 
                   className="product-image"
+                  loading="lazy"  // Added for performance
                 />
               </div>
               <div className="product-content">
