@@ -30,6 +30,12 @@ const categories = [
         price: 18.99,
         image: '/images/sweater.png',
       },
+      {
+        id: 2,
+        name: 'Black Graphic Tee',
+        price: 18.99,
+        image: '/images/sweater.png',
+      },
       
     ],
   },
