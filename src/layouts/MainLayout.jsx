@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
       <HeroBanner />
       <BestsellerSection />
       <NewArrivals />
-      <PopularProducts/>
+      {/* <PopularProducts/> */}
      
       
       <Newsletter />
