@@ -27,32 +27,41 @@ const PopularProducts = () => {
       category: "LIFESTYLE",
       date: "ON JUNE 15, 2024",
       image: Product3
+    },
+    {
+      title: "Accumsan Tortor Posuere Acut Consequat",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
+      category: "LIFESTYLE",
+      date: "ON JUNE 15, 2024",
+      image: Product3
     }
   ];
 
   return (
     <section className="popular-products">
-      <h1 className="section-title">Popular Products</h1>
-      <div className="products-grid">
-        {products.map((product, index) => (
-          <article key={index} className="product-card">
-            <div className="product-image-container">
-              <img 
-                src={product.image} 
-                alt={product.title} 
-                className="product-image"
-              />
-            </div>
-            <div className="product-content">
-              <h2 className="product-title">{product.title}</h2>
-              <p className="product-description">{product.description}</p>
-              <div className="product-meta">
-                <span className="product-category">IN {product.category}</span>
-                <span className="product-date">{product.date}</span>
+      <div className="container">
+        <h1 className="section-title">Popular Products</h1>
+        <div className="products-grid">
+          {products.map((product, index) => (
+            <article key={index} className="product-card">
+              <div className="product-image-container">
+                <img 
+                  src={product.image} 
+                  alt={product.title} 
+                  className="product-image"
+                />
               </div>
-            </div>
-          </article>
-        ))}
+              <div className="product-content">
+                <h2 className="product-title">{product.title}</h2>
+                <p className="product-description">{product.description}</p>
+                <div className="product-meta">
+                  <span className="product-category">IN {product.category}</span>
+                  <span className="product-date">{product.date}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
