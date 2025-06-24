@@ -43,7 +43,7 @@ const products = [
 const BestsellerSection = () => {
   return (
     <div className="bestseller-section">
-      <h2>Browse our Bestsellers</h2>
+      <h2 style={{color:"black"}}>Browse our Bestsellers</h2>
       <div className="product-grid">
         {products.map((p) => (
           <div className="product-card" key={p.id}>

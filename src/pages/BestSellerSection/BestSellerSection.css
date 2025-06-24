@@ -1,6 +1,6 @@
 .bestseller-section {
   padding: 40px 20px;
-  background: linear-gradient(to bottom, #111, #000);
+  background: linear-gradient(to bottom, white,white);
   color: #fff;
   text-align: center;
 }
@@ -18,12 +18,12 @@
 }
 
 .product-card {
-  background-color: #111;
+  background-color:white;
   border: 1px solid #333;
   width: 100%;
   max-width: 300px;
   text-align: left;
-  color: #fff;
+  color:black;
   position: relative;
 }
 
