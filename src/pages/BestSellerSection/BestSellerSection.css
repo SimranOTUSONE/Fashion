@@ -28,14 +28,23 @@
 }
 
 .image-wrapper {
-  position: relative;
+  height: 200px; /* Control the visible image height */
+  overflow: hidden; /* Hide any overflow if the image is taller */
 }
 
 .image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* Crop image to fit the wrapper without distortion */
   display: block;
 }
+
+@media (max-width: 600px) {
+  .image-wrapper img {
+    height: 150px;
+  }
+}
+
 
 .sale-badge {
   position: absolute;

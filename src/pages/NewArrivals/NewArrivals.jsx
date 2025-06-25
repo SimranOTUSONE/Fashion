@@ -66,16 +66,16 @@ const NewArrivals = () => {
               <img src={p.image} alt={p.name} />
               {p.showButton && <button className="view-button">View Details</button>}
             </div>
-            <p className="brand">{p.brand}</p>
-            <div className="colors">
+            <p className="brand" style={{fontSize:"20px"}}>{p.brand}</p>
+            <div className="colors" style={{fontSize:"18px"}}>
               {p.colors.map((c, i) => (
-                <span key={i} className="color-dot" style={{ backgroundColor: c }}></span>
+                <span key={i} className="color-dot" style={{ backgroundColor: c ,fontSize:"18px"}}  ></span>
               ))}
             </div>
-            <h3 className="name">{p.name}</h3>
-            <p className="price">
+            <h3 className="name" style={{fontSize:"20px"}}>{p.name}</h3>
+            <p className="price" style={{fontSize:"20px"}}>
               ${p.price.toFixed(2)}
-              {p.originalPrice && <span className="original">${p.originalPrice.toFixed(2)}</span>}
+              {p.originalPrice && <span className="original" style={{fontSize:"20px"}}>${p.originalPrice.toFixed(2)}</span>}
             </p>
           </div>
         ))}
