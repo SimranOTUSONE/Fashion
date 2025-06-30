@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             
             <div className="footer-col">
-              <h4 className="footer-title">Customer Service</h4>
+              <h4 className="footer-title" style={{fontColor:"black"}}>Customer Service</h4>
               <ul className="footer-links">
                 <li><Link to="/my-account">My Account</Link></li>
                 <li><Link to="/order-tracking">Order Tracking</Link></li>

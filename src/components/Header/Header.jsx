@@ -66,11 +66,11 @@ const Header = () => {
               <button className="search-toggle mobile-only" onClick={toggleSearch} aria-label="Toggle search">
                 <i className="fas fa-search"></i>
               </button>
-
+{/* 
               <Link to="/account" className="account-link">
                 <i className="fas fa-user"></i>
                 <span className="action-label">Account</span>
-              </Link>
+              </Link> */}
 
               <Link to="/wishlist" className="wishlist-link">
                 <i className="fas fa-heart"></i>
@@ -95,7 +95,7 @@ const Header = () => {
             <li>
               <Link to="/categories" onClick={() => setMobileMenuOpen(false)}>Categories</Link>
             </li>
-            <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link></li>
+            <li><Link to="/acc" onClick={() => setMobileMenuOpen(false)}>Account</Link></li>
             <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link></li>
           </ul>
         </div>

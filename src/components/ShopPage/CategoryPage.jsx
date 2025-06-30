@@ -1,5 +1,6 @@
 import React from 'react';
 import './CategoryPage.css';
+import Header from "../Header/Header";
 
 const categories = [
   {
@@ -25,8 +26,9 @@ const categories = [
 ];
 
 const CategoryPage = () => {
-  return (
-    <div className="category-container">
+  return (<>
+  <Header/>
+    <div className="category-container" style={{marginTop:"70px"}}>
       <h2>Shop by Category</h2>
       <div className="category-grid">
         {categories.map((cat, index) => (
@@ -41,6 +43,7 @@ const CategoryPage = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

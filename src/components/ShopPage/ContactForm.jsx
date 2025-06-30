@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
+import Header from "../Header/Header";
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +27,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-wrapper">
+  <>
+  <Header/>
+    <div className="contact-wrapper" style={{marginTop:"140px"}}>
       <div className="contact-form-box">
         <h2>Contact Us</h2>
         <p>Have a question? Reach out to our team.</p>
@@ -66,6 +70,7 @@ const ContactForm = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

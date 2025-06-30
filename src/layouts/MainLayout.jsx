@@ -7,6 +7,7 @@ import Newsletter from '../Newsletter/Newsletter';
 import Footer from '../components/Footer/Footer';
 import CartPage from '../pages/CartPage/CartPage';
 import PopularProducts from '../components/HeroBanner/PopularProducts';
+// import Account from "../components/HeroBanner/Account";                 
 
 const MainLayout = ({ children }) => {
   return (

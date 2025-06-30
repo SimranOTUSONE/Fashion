@@ -3,15 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Header from './components/Header/Header';
 import ContactForm from './components/ShopPage/ContactForm';
-
 import MinimalLayout from './layouts/MinimalLayout';
 import MainLayout from './layouts/MainLayout';
 import CategoryPage from './components/ShopPage/CategoryPage';
-
 import ShopPage from './components/ShopPage/ShopPage';
 import CartPage from './pages/CartPage/CartPage';
 import ProductDetail from './pages/NewArrivals/ProductDetail';
-// Add more full-page components as needed
+import Account from './pages/Account/Account';
 
 function App() {
   return (
@@ -22,8 +20,9 @@ function App() {
           <Route path="/product/:name" element={<ProductDetail />} />
           <Route path="/contact" element={<ContactForm/>}/>
           <Route path="/categories" element={<CategoryPage/>}/>
+          <Route path="/acc" element={<Account/>}/>
+         
 
-          {/* SHOP PAGE: Minimal layout for new tab */}
           <Route
             path="/shop"
             element={
@@ -33,7 +32,6 @@ function App() {
             }
           />
 
-          {/* CART PAGE: Full layout with HeroBanner, NewArrivals, etc. */}
           <Route
             path="/"
             element={
@@ -42,8 +40,6 @@ function App() {
               </MainLayout>
             }
           />
-
-          {/* Add more full-layout routes here if needed */}
         </Routes>
       </Router>
     </CartProvider>

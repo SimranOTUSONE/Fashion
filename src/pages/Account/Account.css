@@ -1,0 +1,373 @@
+/* Account Page Styles */
+.account-page {
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000; /* Changed to black */
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.account-header {
+  background: linear-gradient(to right, #ff9900, #ffad33);
+  padding: 30px 5%;
+  margin-bottom: 20px;
+  color: #000; /* Changed to black */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #000; /* Changed to black */
+}
+
+.user-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #000; /* Changed to black */
+}
+
+.account-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.account-sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-btn {
+  padding: 14px 20px;
+  text-align: left;
+  border: none;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s;
+  color: #000; /* Changed to black */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sidebar-btn:hover {
+  background: #f0f0f0;
+}
+
+.sidebar-btn.active {
+  background: #ff9900;
+  color: #000;
+  font-weight: bold;
+}
+
+.sidebar-btn.logout {
+  margin-top: 30px;
+  background: #ff3333;
+  color: #000;
+}
+
+.sidebar-btn.logout:hover {
+  background: #e60000;
+}
+
+.account-content {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #000; /* Changed to black */
+}
+
+/* Orders Section */
+.orders-section h3, .favorites-section h3, .services-section h3 {
+  margin-top: 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  color: #000; /* Changed to black */
+  font-size: 22px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #000; /* Changed to black */
+}
+
+.order-header span:first-child {
+  font-weight: bold;
+  color: #000; /* Changed to black */
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status.delivered {
+  background: #c8e6c9;
+  color: #256029;
+}
+
+.status.shipped {
+  background: #ffecb3;
+  color: #805b36;
+}
+
+.status.processing {
+  background: #ffcdd2;
+  color: #c63737;
+}
+
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #000; /* Changed to black */
+}
+
+.order-action {
+  background: #ff9900;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.order-action:hover {
+  background: #e68a00;
+}
+
+/* Favorites Section */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.favorite-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.favorite-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f7f7f7;
+  padding: 15px;
+}
+
+.item-info {
+  padding: 15px;
+}
+
+.item-info h4 {
+  margin: 10px 0;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000; /* Changed to black */
+}
+
+.item-info p {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #b12704;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background: #ffd814;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #000; /* Changed to black */
+}
+
+.add-to-cart:hover {
+  background: #f7ca00;
+}
+
+/* Services Section */
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
+}
+
+.service-card h4 {
+  margin-top: 0;
+  color: #000; /* Changed to black */
+  font-size: 18px;
+}
+
+.service-card p {
+  color: #000; /* Changed to black */
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.service-card button {
+  background: #f0f2f2;
+  border: 1px solid #d5d9d9;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000; /* Changed to black */
+}
+
+.service-card button:hover {
+  background: #e3e6e6;
+}
+
+/* Empty States */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #000; /* Changed to black */
+}
+
+.shop-now-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff9900;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.shop-now-btn:hover {
+  background: #e68a00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .account-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  
+  .account-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .sidebar-btn {
+    flex: 1 1 160px;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .sidebar-btn.logout {
+    margin-top: 0;
+    flex-basis: 100%;
+  }
+  
+  .user-profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .account-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-header {
+    padding: 20px 10px;
+  }
+
+  .order-header, .order-details {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .favorites-grid, .service-options {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-btn {
+    flex: 1 1 120px;
+    font-size: 14px;
+  }
+}
